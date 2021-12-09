@@ -18,7 +18,7 @@ Given a pack of cards with unique numbers and a required goal card from the pack
 
 - You need to install Python version 3.x on your machine, or have a python compiler in your IDE (Visual Studio, Pycharm,...).
 - In your terminal, move into this folder and run:
-    - Window: `python solution.py input.txt`
+    - Windows: `python solution.py input.txt`
     - Linux or Mac: `python3 solution.py input.txt`
 - Or you can run the program in your IDE, make sure to config `input.txt` as an argument.
 
