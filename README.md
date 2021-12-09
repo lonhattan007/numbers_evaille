@@ -61,4 +61,22 @@ The project folder contains these files:
 
 ## How it works
 
-To be added.
+I decided to divide the solving process into 2 parts:
+
+- Looking for all the combos possible
+- Checking if the combos found satisfy the conditions given
+
+The checking process is quite easy. The part where we look for all the combos can be pretty hard and might take a lot of time and resource if we use any inappropriate method, such as brute-force. Therefore, I come up with a similar problem which already have a proper solution.
+
+### (0-1) Knapsack problem
+
+"A thief robbing a store finds it filled with _N_ types of items of varying size and value, but has only a small knapsack of capacity _M_ to carry the goods. __The knapsack problem__ is to find the combination of items which the thief should choose for his knapsack in order to maximize the total value of all the items he takes."
+
+See the similarities? 
+
+- Here, the store is our deck, _N_ types of items are 107 (and more) cards, and the capacity _M_ is the number of cards to add, which is 4 in our case.
+- Each card has a specific number which is its value, and in our case, every card has the same size, hence 4 cards makes the bag full. 
+- The (0-1) in the problem name indicates that only one of each item can be taken. Same thing happens to our cards. 
+- In the original problem, we try to maximize the total value. In this case, we also do it but with a specific boundary of the total value.
+
+Those points make our problem a specific version of the original __Knapsack problem__.

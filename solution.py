@@ -14,6 +14,8 @@ def import_deck(filename: str) -> Deck:
         for line in open_file_obj:
             deck.sorted_append(import_card(line))
 
+    open_file_obj.close()
+
     return deck
 
 
@@ -31,9 +33,19 @@ def solve(deck: Deck, goal: int):
         raise Exception("Goal number is out of deck range")
 
     # TODO
-    
 
-    return [] # solutions
+    """Select all the candidates: differs from the goal number in rank and smaller than goal - 5"""
+    goal_rank = deck.rank_of(goal)
+
+    candidate_lst = list(filter(lambda a: a[0].rank != goal_rank, deck.ranks))
+    
+    i = 0
+    for candidate in candidate_lst:
+        candidate_lst[i] = list(filter(lambda a: a.number < goal - 5, candidate))
+        i+=1
+
+
+    return candidate_lst # solutions
 
 
 def main():
@@ -70,5 +82,6 @@ if __name__ == "__main__":
     """Output: list of solutions"""
     
     main()
+
     
     
