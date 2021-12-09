@@ -41,12 +41,30 @@ def solve(deck: Deck, goal: int):
     
     i = 0
     for candidate in candidate_lst:
-        candidate_lst[i] = list(filter(lambda a: a.number < goal - 5, candidate))
-        i+=1
+        candidate_lst[i] = list(filter(lambda a: a.number < goal - 6, candidate))
+        
+        if len(candidate_lst[i]) == 0:
+            candidate_lst.pop(i)
+        else:
+            i+=1
 
-    solution_lst = []
+    # solution_lst = []
 
-    return solution_lst
+    # def foo(sum, parts, start, solution) -> any:
+    #     if parts == 1:
+    #         return [sum]
+    #     else:
+    #         for i in range(start, sum - parts*(parts-1)/2):
+    #             return solution + foo(sum-i, parts-1, i+1, solution)   
+    
+    # for i in range(1, goal - 6):
+    #     solution = []
+    #     left = goal - i
+
+
+
+
+    return candidate_lst
 
 
 def main():
