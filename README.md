@@ -14,12 +14,33 @@ Given a pack of cards with unique numbers and a required goal card from the pack
 - _input.txt_: Input file, currently only contains 107 first cards and their primary ranks
 - _README.md_: Instruction file
 
+## Preparation
+
+- Install [Git](https://git-scm.com/download/win)
+- Install [Python 3](https://www.python.org/downloads/release/python-3100/)
+
 ## How to use
 
 - You need to install Python version 3.x on your machine, or have a python compiler in your IDE (Visual Studio, Pycharm,...).
+- In your terminal, clone this repo:
+    ```
+    git clone https://github.com/lonhattan007/numbers_evaille.git
+    ```
+    or: 
+    ```
+    git clone git@github.com:lonhattan007/numbers_evaille.git
+    ```
+- Move into this folder:
+    ```
+    cd numbers_evaille
+    ```
 - In your terminal, move into this folder and run:
-    - Windows: `python solution.py input.txt`
-    - Linux or Mac: `python3 solution.py input.txt`
+    - Windows: 
+    ```
+    python solution.py input.txt
+    ```
+    - Linux or Mac: 
+    ```python3 solution.py input.txt```
 - Or you can run the program in your IDE, make sure to config `input.txt` as an argument.
 
 ## Status
