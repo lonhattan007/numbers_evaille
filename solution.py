@@ -26,7 +26,7 @@ def solve(deck: Deck, goal: int):
     if deck.is_empty():
         raise Exception("Deck is empty")
     
-    if len(deck.ranks) < 5:
+    if len(deck.rank_lst) < 5:
         raise Exception("Not enough ranks")  
 
     if goal < deck.min_num() or goal > deck.max_num():
@@ -37,15 +37,16 @@ def solve(deck: Deck, goal: int):
     """Select all the candidates: differs from the goal number in rank and smaller than goal - 5"""
     goal_rank = deck.rank_of(goal)
 
-    candidate_lst = list(filter(lambda a: a[0].rank != goal_rank, deck.ranks))
+    candidate_lst = list(filter(lambda a: a[0].rank != goal_rank, deck.rank_lst))
     
     i = 0
     for candidate in candidate_lst:
         candidate_lst[i] = list(filter(lambda a: a.number < goal - 5, candidate))
         i+=1
 
+    solution_lst = []
 
-    return candidate_lst # solutions
+    return solution_lst
 
 
 def main():
