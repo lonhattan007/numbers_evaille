@@ -66,7 +66,3 @@ The project folder contains these files:
     git pull
     ```
 - __DON'T__ push to the repo directly. Ask the author first.
-
-## How it works
-
-To be added
