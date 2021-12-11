@@ -8,8 +8,7 @@ Given a pack of cards with unique numbers and a required goal card from the pack
 
 ## Status
 
-- __The algorithm is not ready, currently the program just imports and prints cards' info.__
-- Solving for extra cards is currently unavailable.
+- Solving for extra cards is currently unavailable. You have to find a way to format them in the input file.
 - The input file can only contain a rank per card. For cards with alternative ranks, you need to create a new input file.
 
 ## Folder structure:
