@@ -1,6 +1,7 @@
 from sys import argv
 from card import Card
 from deck import Deck
+from algorithm import sum_of_n
 
 
 def import_card(string: str) -> Card:
