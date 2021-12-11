@@ -18,8 +18,10 @@ The project folder contains these files:
 
 - _card.py_: Python file defining class Card
 - _deck.py_: Python file defining class Deck
+- _algorithm.py_: Python file defining algorithm to find all the combinations to make the total but haven't checked their ranks yet
 - _solution.py_: Python solution file
-- _input.txt_: Input file, currently only contains 107 first cards and their primary ranks
+- _input.txt_: Sample input file, currently only contains 107 first cards and their primary ranks
+- _output.txt_: Sample output file for Card number 86
 - _README.md_: Instruction file
 - _.gitignore_: Git's config file to ignore unnecessary files while releasing the project
 
@@ -45,38 +47,21 @@ The project folder contains these files:
     ```
     cd numbers_evaille
     ```
-- In your terminal, move into this folder and run:
+- In your terminal, move into this folder and run the following command:
     - Windows: 
     ```
-    python solution.py input.txt
+    python solution.py your_input_file_name.txt your_output_file_name.txt
     ```
     - Linux or Mac: 
-    ```python3 solution.py input.txt```
-- Or you can run the program in your IDE, make sure to config `input.txt` as an argument.
+    ```python3 solution.py your_input_file_name.txt your_output_file_name.txt```
+    - For example:
+    ```
+    python solution.py input_base_107.txt output_86.txt
+    ```
+- Or you can run the program in your IDE, make sure to config your input and output files' names as arguments.
+- The program will rewrite the file `output.txt`, 
 - To get updates, move in to `numbers_evaille` folder and run:
     ```
     git pull
     ```
 - __DON'T__ push to the repo directly. Ask the author first.
-
-## How it works
-
-I decided to divide the solving process into 2 parts:
-
-- Looking for all the combos possible
-- Checking if the combos found satisfy the conditions given
-
-The checking process is quite easy. The part where we look for all the combos can be pretty hard and might take a lot of time and resource if we use any inappropriate method, such as brute-force. Therefore, I come up with a similar problem which already have a proper solution.
-
-### (0-1) Knapsack problem
-
-"A thief robbing a store finds it filled with _N_ types of items of varying size and value, but has only a small knapsack of capacity _M_ to carry the goods. __The knapsack problem__ is to find the combination of items which the thief should choose for his knapsack in order to maximize the total value of all the items he takes."
-
-See the similarities? 
-
-- Here, the store is our deck, _N_ types of items are 107 (and more) cards, and the capacity _M_ is the number of cards to add, which is 4 in our case.
-- Each card has a specific number which is its value, and in our case, every card has the same size, hence 4 cards makes the bag full. 
-- The (0-1) in the problem name indicates that only one of each item can be taken. Same thing happens to our cards. 
-- In the original problem, we try to maximize the total value. In this case, we also do it but with a specific boundary of the total value.
-
-Those points make our problem a specific version of the original __Knapsack problem__.
