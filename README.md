@@ -4,7 +4,7 @@
 
 This program is written to solve the Numbers Evaille problem:
 
-Given a pack of cards with unique numbers and a required goal card from the pack. The cards are categorized into ranks. Find 4 cards of whose ranks differ from each other and the goal number card's rank, such that the sum of the 4 cards is equal to the goal card's number.
+Given a pack of cards with unique numbers and a required goal card from the pack. The cards are categorized into ranks. Find 4 cards of whose ranks differ from each other, such that the sum of the 4 cards is equal to the goal card's number.
 
 ## Status
 
@@ -53,7 +53,9 @@ The project folder contains these files:
     python solution.py your_input_file_name.txt your_output_file_name.txt
     ```
     - Linux or Mac: 
-    ```python3 solution.py your_input_file_name.txt your_output_file_name.txt```
+    ```
+    python3 solution.py your_input_file_name.txt your_output_file_name.txt
+    ```
     - For example:
     ```
     python solution.py input_base_107.txt output_86.txt
@@ -65,3 +67,7 @@ The project folder contains these files:
     git pull
     ```
 - __DON'T__ push to the repo directly. Ask the author first.
+
+## How it works
+
+To be added

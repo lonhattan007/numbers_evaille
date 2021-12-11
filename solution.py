@@ -41,16 +41,19 @@ def solve(deck: Deck, goal: int):
     """Select all the candidates: differs from the goal number in rank and smaller than goal - 5"""
     goal_rank = deck.rank_of(goal)
 
+    
     def check_valid_combo(lst) -> bool:
         rank_lst = [deck.rank_of(n) for n in lst]
 
-        if goal_rank in rank_lst:
-            return False
-        elif len(rank_lst) != len(set(rank_lst)):
+        if len(rank_lst) != len(set(rank_lst)):
             return False        
+        # Uncomment these 2 lines if you want the goal number's rank not included in the combination"""
+        # elif goal_rank in rank_lst:
+            # return False
         else:
             return True
 
+    
     solution_lst = sum_of_n(goal, 4, 1)
     solution_lst = [n for n in solution_lst if check_valid_combo(n)]
 
@@ -93,7 +96,7 @@ def main():
 
         open_file_obj.close()
 
-        print("All the solutions are in the output.txt file")
+        print("All the solutions are in the", argv[2], "file")
     except:
         print("Problem opening file!")
 
