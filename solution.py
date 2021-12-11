@@ -77,11 +77,22 @@ def main():
     try:
         open_file_obj = open(argv[2], 'w')
 
+        msg = "Desired card number: " + str(goal) + "; Rank: " + str(deck.rank_of(goal)) + "\n"
+        open_file_obj.write(msg)
+
         if len(solutions) == 0:
             msg = "No solutions were found\n"
             print(msg, end="")
             open_file_obj.write(msg)
         else:
+            if len(solutions) == 1:
+                msg = "Found 1 solution\n"
+            else:
+                msg = "Found " + str(len(solutions)) + " solutions\n"
+
+            open_file_obj.write(msg)
+            open_file_obj.write("________________\n")
+
             no = 1
             for sol in solutions:
                 msg = "Solution " + str(no) + "\n"
@@ -104,7 +115,7 @@ def main():
 
         print("All the solutions are in the", argv[2], "file")
     except:
-        print("Problem opening file!")
+        print("Problem opening and writing file!")
 
 if __name__ == "__main__":
     """Input: (1) list of cards, sorted in ascending order of card number
