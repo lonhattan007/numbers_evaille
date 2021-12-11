@@ -5,10 +5,14 @@ from algorithm import sum_of_n
 
 
 def import_card(string: str) -> Card:
+    """Importing a card from a data string"""
+
     return Card(string.split(', '))
 
 
 def import_deck(filename: str) -> Deck:
+    """Importing a deck from an input file"""
+
     deck = Deck()
     
     try:
@@ -24,7 +28,7 @@ def import_deck(filename: str) -> Deck:
 
 
 def solve(deck: Deck, goal: int):
-    # """Solve the problem in Dynamic Programming style"""
+    """Solve the problem"""
     
     """Check for exceptions"""
     if deck.is_empty():
@@ -43,11 +47,13 @@ def solve(deck: Deck, goal: int):
 
     
     def check_valid_combo(lst) -> bool:
+        """Check if a combination is valid"""
+        
         rank_lst = [deck.rank_of(n) for n in lst]
 
         if len(rank_lst) != len(set(rank_lst)):
             return False        
-        # Uncomment these 2 lines if you want the goal number's rank not included in the combination"""
+        # Uncomment these 2 lines below if you want the goal number's rank not included in the combination"""
         # elif goal_rank in rank_lst:
             # return False
         else:
