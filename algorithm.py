@@ -4,9 +4,9 @@ def sum_of_n(sum, n, start):
     """This function find all the combinations of n different number whose sum equals the given number"""
     
     if n < 1:
-        print("Invalid input: No of numbers must be at least 1!")
+        raise Exception("Invalid input: No of numbers must be at least 1!")
     elif sum < n*(n-1)/2:
-        print("Invalid input: sum can't be made from n different numbers!")
+        raise Exception("Invalid input: sum can't be made from n different numbers!")
     elif n == 1:
         return [[sum]]
     else:
