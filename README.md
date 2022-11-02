@@ -60,9 +60,4 @@ The project folder contains these files:
     python solution.py input_base_107.txt output_86.txt
     ```
 - Or you can run the program in your IDE, make sure to config your input and output files' names as arguments.
-- The program will rewrite the file `output.txt`, 
-- To get updates, move in to `numbers_evaille` folder and run:
-    ```
-    git pull
-    ```
-- __DON'T__ push to the repo directly. Ask the author first.
+- The program will rewrite the file `output.txt`
